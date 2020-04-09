@@ -2,7 +2,9 @@ import React from "react";
 
 function SearchPage(props){
     return(
-        <>Search Page</>
+        <div >
+            search
+        </div>
     )
 }
 export default SearchPage;

@@ -1,0 +1,9 @@
+.jumbotron{
+    background-image: url("https://jwwaterhouse.org/wp-content/uploads/2019/08/888661-beautiful-library-background-images-1920x1080-iphone.jpg");
+    height: 40vh;
+    background-size: cover;
+}
+.heading{
+    font-size: 80px;
+    color: snow;
+}
