@@ -11,11 +11,14 @@ function BookList (props){
                  <div className="col-md-2 bookImage">{books.volumeInfo.imageLinks && books.volumeInfo.imageLinks.thumbnail ?
                   <img src={books.volumeInfo.imageLinks.thumbnail} alt="" />: "no image" }
              </div>
-             <div className="col-md-10">
-                
+             <div className="col-md-10">   
              <div className=" card-body bookDescription">
                  <h3>{books.volumeInfo.title}</h3>{books.volumeInfo.imageLinks && books.volumeInfo.authors ? 
-                 <ul>{books.volumeInfo.authors.map(author =><li>{author}</li>)}</ul> : "no author"}
+
+                 <ul>{books.volumeInfo.authors.map(author =>
+                   <li>{author}</li>)}
+                </ul> : "no author"}
+                
                  <p>{books.volumeInfo.description}</p>
                  <div class = "d-flex justify-content-start">
                      <a class = "btn badge-pill btn-outline-dark mt-3" href={books.volumeInfo.previewLink}>View</a>
