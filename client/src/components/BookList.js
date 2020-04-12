@@ -22,7 +22,7 @@ function BookList (props){
                  <p>{books.volumeInfo.description}</p>
                  <div class = "d-flex justify-content-start">
                      <a class = "btn badge-pill btn-outline-dark mt-3" href={books.volumeInfo.previewLink}>View</a>
-                     <a class="btn badge-pill btn-outline-warning mt-3 ml-3" href="/saved" >Saved</a>
+                     <a class="btn badge-pill btn-outline-warning mt-3 ml-3" href="/saved" >Save</a>
                  </div>
                 </div>
                 </div>

@@ -12,9 +12,7 @@ function SearchPage(props){
         setSearchBook(input);
     }
     async function setBooksResult(){
-        
-        
-        const result=await fetch(`https://www.googleapis.com/books/v1/volumes?q=${searchBook}`).then(result=>result.json())
+        const result= await fetch(`https://www.googleapis.com/books/v1/volumes?q=${searchBook}`).then(result=>result.json())
         setBookList(result.items);
     }
     return(
