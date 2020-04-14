@@ -1,6 +1,17 @@
 import React from "react";
+import API from "../utils/API";
 
 function BookList (props){
+
+ function handleBookSave(){
+    API.saveBook({
+      title: props.bookList.volumeInfo.title,
+      author: props.bookList.volumeInfo.authors,
+      description: props.bookList.volumeInfo.description,
+      previewLink: props.bookList.volumeInfo.previewLink,
+      imageLink: props.bookList.volumeInfo.imageLinks
+    })
+  };
     
     return(
         <div>
@@ -22,7 +33,7 @@ function BookList (props){
                  <p>{books.volumeInfo.description}</p>
                  <div class = "d-flex justify-content-start">
                      <a class = "btn badge-pill btn-outline-dark mt-3" href={books.volumeInfo.previewLink}>View</a>
-                     <a class="btn badge-pill btn-outline-warning mt-3 ml-3" href="/saved" >Save</a>
+                     <a class="btn badge-pill btn-outline-warning mt-3 ml-3" href="/saved" onClick={function(){handleBookSave()}} >Save</a>
                  </div>
                 </div>
                 </div>

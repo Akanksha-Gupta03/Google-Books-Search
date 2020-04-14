@@ -33,18 +33,17 @@ render(){
             <div class="card">
               <div class="row">
                <div className="col-md-2 bookImage">
-                 <h1>{this.state.books.image}</h1>
-                <img src=" " alt="" />
+                <img src={this.state.books.imageLinks}alt="" />
                </div>
                <div className="col-md-10">   
                 <div className=" card-body bookDescription">
-                 <h3>title</h3>
+                 <h3>{this.state.books.title}</h3>
 
                  <ul>
-                  <li>author</li>
+                   <li>{this.state.books.author}</li>
                  </ul>
             
-                 <p>description</p>
+                  <p>{this.state.books.description}</p>
                  <div class = "d-flex justify-content-start">
                    <a class = "btn badge-pill btn-outline-dark mt-3" href=" ">View</a>
                    <a class="btn badge-pill btn-outline-warning mt-3 ml-3" href=" " >Unsave</a>

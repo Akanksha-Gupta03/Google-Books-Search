@@ -8,13 +8,6 @@ const app = express();
 app.use( express.static('client/build/') );
 app.use( express.urlencoded({ extended: false }) );
 
-app.get(" ", async function(req,res){
-
-})
-
-app.post("api/book/:id", async function(req,res){
-
-})
 
 
 app.listen( PORT, function(){
