@@ -1,16 +1,21 @@
-import React from "react";
+import React,{useState} from "react";
 import API from "../utils/API";
+import axios from 'axios';
 
 function BookList (props){
 
- function handleBookSave(){
-    API.saveBook({
-      title: props.bookList.volumeInfo.title,
-      author: props.bookList.volumeInfo.authors,
-      description: props.bookList.volumeInfo.description,
-      previewLink: props.bookList.volumeInfo.previewLink,
-      imageLink: props.bookList.volumeInfo.imageLinks
-    })
+  async function handleBookSave(){
+   //console.log("Props: "+JSON.stringify(props.bookList[0].volumeInfo));
+   const newBook = {
+      title: props.bookList[0].volumeInfo.title,
+      author: props.bookList[0].volumeInfo.authors,
+      description: props.bookList[0].volumeInfo.description,
+      previewLink: props.bookList[0].volumeInfo.previewLink,
+      imageLink: props.bookList[0].volumeInfo.imageLinks
+    }
+
+    const result = await axios.post('/api/create', newBook);
+    console.log("Query Result: "+result);
   };
     
     return(
@@ -33,7 +38,7 @@ function BookList (props){
                  <p>{books.volumeInfo.description}</p>
                  <div class = "d-flex justify-content-start">
                      <a class = "btn badge-pill btn-outline-dark mt-3" href={books.volumeInfo.previewLink}>View</a>
-                     <a class="btn badge-pill btn-outline-warning mt-3 ml-3" href="/saved" onClick={function(){handleBookSave()}} >Save</a>
+                     <a class="btn badge-pill btn-outline-warning mt-3 ml-3" onClick={function(){handleBookSave()}} >Save</a>
                  </div>
                 </div>
                 </div>
