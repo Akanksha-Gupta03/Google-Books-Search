@@ -13,3 +13,13 @@ express
 node
 react
 ```
+# Installations
+```
+npx create-react-app app-name
+npm react-router-dom
+npm init
+npm install express
+npm install mongoose
+npm install dotenv
+npm install axios
+```
