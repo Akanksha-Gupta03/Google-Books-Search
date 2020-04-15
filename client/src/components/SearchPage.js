@@ -17,17 +17,6 @@ function SearchPage(props){
         const result= await fetch(`https://www.googleapis.com/books/v1/volumes?q=${searchBook}`).then(result=>result.json())
         setBookList(result.items);
     }
-    // async function testingApi(){
-    //     const mybook = {
-    //         title : 'test',
-    //         description: 'testing',
-    //         author: 'somebody',
-    //         previewLink: 'empty',
-    //         imageLink: 'link'
-    //     }
-    //     const result = await axios.post('/api/create', mybook)
-    //     console.log(result);
-    // }
     return(
         <div>
         <div className="container">
