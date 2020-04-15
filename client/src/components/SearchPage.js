@@ -36,7 +36,6 @@ function SearchPage(props){
                     <label htmlfor="search">Search books of your Interest</label>
                     <input type="text" name="search" class="form-control" id="search" placeholder="Search your Book" onChange={handleInputChange} value={searchBook} />
                     <button className="btn btn-dark mt-3 mb-5" onClick={function(){setBooksResult()}}>Search</button>
-                    {/* <button className="btn btn-dark mt-3 mb-5" onClick={function(){testingApi()}}>Test</button> */}
                 </div>
                 
         </div>
